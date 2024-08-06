@@ -14,4 +14,8 @@ CHIP Inc16 {
 
     PARTS:
    // Put you code here:
+   // We use an Add16 chip where the first input the 16-bit input
+   // And we set the second input to true (1)
+   // Hence we add 1 to each bit
+   Add16(a=in, b[0]=true, out=out);
 }
