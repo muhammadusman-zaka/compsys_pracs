@@ -14,4 +14,11 @@ CHIP FullAdder {
 
     PARTS:
     // Put you code here:
+    // We use the first half adder to add a + b
+    // We use the second half adder to add (a+b) and c
+    // That's our final sum
+    // For the carry, we just take OR(carry1, carry2)
+     HalfAdder(a=a, b=b, sum=s1, carry=c1);
+     HalfAdder(a=c, b=s1, sum=sum, carry=c2);
+     Or(a=c1, b=c2, out=carry);
 }
